@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="gallery-container">
+
+    <!-- Gallery Heading -->
+    <div class="gallery-section">
+        <h2>Team Memories</h2>
+        <div class="gallery-grid">
+            {% for img in image_files %}
+                <div class="gallery-item {% if loop.index > 12 %}hidden{% endif %}" onclick="openLightbox(this)">
+                    <img
+                        data-src="{{ url_for('static', filename=img) }}"
+                        src="{{ url_for('static', filename=img) if loop.index <= 12 else '' }}"
+                        alt="Photo {{ loop.index }}">
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- View All Button (Hidden if <= 12 images) -->
+        {% if image_files|length > 12 %}
+            <button id="view-all-btn" onclick="showAllImages()">View All</button>
+        {% endif %}
+    </div>
+
+</div>
+
+<!-- Lightbox Popup -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded Image">
+</div>
+
+{% endblock %}

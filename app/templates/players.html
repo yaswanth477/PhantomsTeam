@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="team-container">
+    <!-- Animated Heading -->
+    <h1 class="team-heading">Meet the Team ✨</h1>
+
+
+    <!-- Team Grid -->
+    <div class="row justify-content-center">
+        {% for player in [
+            {'name': 'Pruthvi', 'role': 'All Rounder', 'image': 'pruthvi.jpeg'},
+            {'name': 'Yaswanth Pedavalli', 'role': 'All Rounder', 'image': 'Yaswanthp.jpeg'},
+            {'name': 'Uday', 'role': 'Bowler', 'image': 'Uday.jpeg'},
+            {'name': 'Asif S', 'role': 'All Rounder', 'image': 'Asif.jpeg'},
+            {'name': 'Sowmith', 'role': 'All Rounder', 'image': 'sowmith.jpeg'},
+            {'name': 'Sumanth P', 'role': 'All Rounder', 'image': 'Sumanth.jpeg'},
+            {'name': 'Chaitanya', 'role': 'All Rounder', 'image': 'Chaitanya.jpeg'}
+        ] %}
+        <div class="col-lg-2 col-md-6 col-sm-6 mb-6">
+            <div class="team-member">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='images/' + player.image) }}" alt="{{ player.name }}">
+                </div>
+                <h3>{{ player.name }}</h3>
+                <p>{{ player.role }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

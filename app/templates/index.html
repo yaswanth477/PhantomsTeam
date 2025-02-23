@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Main container -->
+<div class="main-container">
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <img src="{{ url_for('static', filename='images/hero-image.jpg') }}" alt="PhantomsXI Banner" class="hero-img">
+    </div>
+
+    <!-- Past Seasons Section -->
+    <div class="previous-seasons">
+        <h2 class="section-heading">OUR PAST SEASONS</h2>
+        <div class="season-container">
+            <div class="season-card">
+                <a href="https://cricclubs.com/empirestatecricketleague/viewTeam.do?teamId=340&clubId=22424" class="season-link">
+                    <img src="{{ url_for('static', filename='images/Indoor.jpg') }}" alt="2024 Indoor">
+                    <div class="overlay"><span>2024 Indoor</span></div>
+                </a>
+            </div>
+            <div class="season-card">
+                <a href="https://cricclubs.com/empirestatecricketleague/viewTeam.do?teamId=340&clubId=22424" class="season-link">
+                    <img src="{{ url_for('static', filename='images/Tapeball.jpg') }}" alt="2024 Tape Ball">
+                    <div class="overlay"><span>2024 Tape Ball</span></div>
+                </a>
+            </div>
+            <div class="season-card">
+                <a href="https://cricclubs.com/empirestatecricketleague/teamResults.do?teamId=361&clubId=22424" class="season-link">
+                    <img src="{{ url_for('static', filename='images/T10Tennisball.jpg') }}" alt="2024 Summer T10">
+                    <div class="overlay"><span>2024 Summer T10</span></div>
+                </a>
+            </div>
+            <div class="season-card">
+                <a href="#" class="season-link">
+                    <img src="{{ url_for('static', filename='images/T10Hardball.jpg') }}" alt="2024 Hardball T10">
+                    <div class="overlay"><span>2024 Hardball T10</span></div>
+                </a>
+            </div>
+            <div class="season-card">
+                <a href="https://cricclubs.com/empirestatecricketleague/viewTeam.do?teamId=414&clubId=22424" class="season-link">
+                    <img src="{{ url_for('static', filename='images/T20Tennisball.jpg') }}" alt="2024 Tennisball T20">
+                    <div class="overlay"><span>2024 Summer T20</span></div>
+                </a>
+            </div>
+            <div class="season-card">
+                <a href="https://cricclubs.com/empirestatecricketleague/teamResults.do?teamId=424&clubId=22424" class="season-link">
+                    <img src="{{ url_for('static', filename='images/T20Hardball.jpg') }}" alt="2024 HardBall T20">
+                    <div class="overlay"><span>2024 HardBall T20</span></div>
+                </a>
+            </div>
+            <div class="season-card">
+                <a href="https://cricclubs.com/empirestatecricketleague/teamResults.do?teamId=461&clubId=22424" class="season-link">
+                    <img src="{{ url_for('static', filename='images/T10Tennisball.jpg') }}" alt="2024 Fall T10">
+                    <div class="overlay"><span>2024 Fall T10</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
