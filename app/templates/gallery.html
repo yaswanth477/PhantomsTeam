@@ -3,7 +3,7 @@
 {% block content %}
 <div class="gallery-container">
 
-    <!-- Gallery Heading -->
+    <!-- 📸 Gallery Heading -->
     <div class="gallery-section">
         <h2>Team Memories</h2>
         <div class="gallery-grid">
@@ -17,7 +17,7 @@
             {% endfor %}
         </div>
 
-        <!-- View All Button (Hidden if <= 12 images) -->
+        <!-- 👀 View All Button (Hidden if <= 12 images) -->
         {% if image_files|length > 12 %}
             <button id="view-all-btn" onclick="showAllImages()">View All</button>
         {% endif %}
@@ -25,9 +25,9 @@
 
 </div>
 
-<!-- Lightbox Popup -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
+<!-- 🔍 Lightbox Popup for Enlarged Image -->
+<div class="lightbox hidden" id="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
     <img id="lightbox-img" src="" alt="Expanded Image">
 </div>
 

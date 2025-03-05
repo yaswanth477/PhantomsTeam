@@ -2,52 +2,57 @@
 
 {% block content %}
 <div class="about-container">
-    <!-- Hero Section with Fade-in Animation -->
+    <!-- Hero Section (No Changes) -->
     <div class="hero-section animate-fade-in">
     </div>
 
-    <!-- Main Content with Pastel Background -->
-    <div class="about-content pastel-bg">
-        <div class="about-text animate-slide-left">
-            <h2 class="highlight-orange">Our Story</h2>
-            <p>
-                PhantomsXI Cricket Club was founded with a passion for the game and a vision to create a thriving cricketing community.
-                Over the years, we have grown into a club known for excellence, teamwork, and sportsmanship.
-            </p>
-            <h2 class="highlight-blue">Our Mission</h2>
-            <p>
-                We aim to foster young talent, promote cricketing culture, and compete at the highest levels while maintaining a strong sense of camaraderie.
-            </p>
-            <h2 class="highlight-green">Why Join Us?</h2>
-            <p>
-                Whether you're a seasoned player or just starting, PhantomsXI welcomes all skill levels. We provide professional coaching, competitive matches,
-                and a great community of cricket enthusiasts.
-            </p>
-        </div>
-        <div class="about-image animate-slide-right">
-            <img src="{{ url_for('static', filename='images/team-left.jpeg') }}" alt="Cricket Team">
-            <img src="{{ url_for('static', filename='images/team-right.jpeg') }}" alt="Cricket Team">
-        </div>
-    </div>
+    <!-- 🏆 Two-Column Layout for Main Content & Core Values -->
+    <div class="about-layout">
+        <!-- ✅ Left: Main Content -->
+        <div class="about-content pastel-bg">
+            <div class="about-text animate-slide-left">
+                <h2 class="highlight-orange">Our Story</h2>
+                <p>
+                    PhantomsXI Cricket Club was founded with a passion for the game and a vision to create a thriving cricketing community.
+                    Over the years, we have grown into a club known for excellence, teamwork, and sportsmanship.
+                </p>
+                <h2 class="highlight-blue">Our Mission</h2>
+                <p>
+                    We aim to foster young talent, promote cricketing culture, and compete at the highest levels while maintaining a strong sense of camaraderie.
+                </p>
+                <h2 class="highlight-green">Why Join Us?</h2>
+                <p>
+                    Whether you're a seasoned player or just starting, PhantomsXI welcomes all skill levels. We provide professional coaching, competitive matches,
+                    and a great community of cricket enthusiasts.
+                </p>
+            </div>
 
-    <!-- Values Section with Indian Flag Colors -->
-    <div class="values-section">
-        <h2 class="animate-text">Our Core Values</h2>
-        <div class="values-grid">
-            <div class="value-card value-bg-orange animate-pop">
-                <i class="fas fa-users"></i>
-                <h3>Teamwork</h3>
-                <p>We believe in working together to achieve greatness on and off the field.</p>
+            <!-- ✅ Team Images (Kept Responsive) -->
+            <div class="about-image animate-slide-right">
+                <img src="{{ url_for('static', filename='images/team-left.jpeg') }}" alt="Cricket Team">
+                <img src="{{ url_for('static', filename='images/team-right.jpeg') }}" alt="Cricket Team">
             </div>
-            <div class="value-card value-bg-white animate-pop delay-1">
-                <i class="fas fa-trophy"></i>
-                <h3>Excellence</h3>
-                <p>We strive for excellence in every match and training session.</p>
-            </div>
-            <div class="value-card value-bg-green animate-pop delay-2">
-                <i class="fas fa-heart"></i>
-                <h3>Passion</h3>
-                <p>Cricket is more than a sport for us—it's our passion and way of life.</p>
+        </div>
+
+        <!-- ✅ Right: Our Core Values -->
+        <div class="values-section animate-fade-in">
+            <h2 class="animate-text">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card value-bg-orange animate-pop">
+                    <i class="fas fa-users"></i>
+                    <h3>Teamwork</h3>
+                    <p>We believe in working together to achieve greatness on and off the field.</p>
+                </div>
+                <div class="value-card value-bg-white animate-pop delay-1">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Excellence</h3>
+                    <p>We strive for excellence in every match and training session.</p>
+                </div>
+                <div class="value-card value-bg-green animate-pop delay-2">
+                    <i class="fas fa-heart"></i>
+                    <h3>Passion</h3>
+                    <p>Cricket is more than a sport for us—it's our passion and way of life.</p>
+                </div>
             </div>
         </div>
     </div>

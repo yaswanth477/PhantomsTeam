@@ -1036,27 +1036,21 @@ html, body {
 }
 
 
-.previous-seasons {
-    width: 100%;
-    padding: 50px 5%;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-
 /* Flex container */
 .season-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
+
 
 /* Individual season card */
 .season-card {
     position: relative;
-    width: 300px;
-    height: 250px;
-    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -1118,13 +1112,6 @@ html, body {
     color: #1a1a1a; /* Dark color for better visibility */
 }
 
-.previous-seasons {
-    background: #d4edda; /* Light pastel blue */
-    padding: 50px 0;
-    border-radius: 10px;
-    width: 100%;
-    text-align: center;
-}
 
 /* Ensure the section container doesn't have white gaps */
 .season-container {
@@ -1169,3 +1156,968 @@ html, body {
     font-size: 18px;
     margin-top: 10px;
 }
+
+
+/* Individual season card with shadow and hover effect */
+.season-card {
+    position: relative;
+    width: 400px; /* Increased size by 15% */
+    height: 400px; /* Increased size by 15% */
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff; /* Ensures clean background */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Ensure images fit properly */
+.season-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay effect with better visibility */
+.season-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Text inside overlay */
+.season-card .overlay span {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover Effects */
+.season-card:hover {
+    transform: scale(1.05); /* Slight pop-out effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhances depth */
+}
+
+.season-card:hover img {
+    transform: scale(1.1);
+}
+
+.season-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Make entire card clickable */
+.season-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* Style for "OUR PAST SEASONS" Heading */
+.section-heading {
+    font-size: 2.2rem; /* Slightly larger font */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 50px 0;
+    color: #1a1a1a;
+}
+
+/* Background and spacing for previous seasons */
+.previous-seasons {
+    background: #d4edda; /* Light pastel green */
+    padding: 50px 0;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Season Container - Adjusted for Better Alignment */
+.season-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Slightly larger gap for spacing */
+    padding: 20px;
+}
+
+.previous-seasons {
+    background: creame; /* Solid black background */
+    padding: 50px 20px;
+    border-radius: 15px; /* Smooth rounded edges */
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Black shadow effect */
+
+    /* Full Blue Border */
+    border: 8px solid #007bff; /* Blue border on all sides */
+}
+
+/* Ensure season cards remain clear and visible */
+.season-card {
+    background: white; /* Keep a white background for contrast */
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Light shadow for depth */
+}
+
+/* Optional: Adjust for Mobile */
+@media (max-width: 768px) {
+    .previous-seasons {
+        border-width: 5px; /* Slightly thinner border for mobile */
+        padding: 30px 10px;
+    }
+}
+
+
+/* Apply only to index.html */
+body.index-page .main-container {
+    min-height: 110vh; /* Increase height while keeping layout intact */
+}
+
+/* Reduce bottom margin of hero-section to keep it close to "OUR PAST SEASONS" */
+body.index-page .hero-section {
+    margin-bottom: 0px; /* Reduce space below the hero image */
+}
+
+/* Apply only to index.html */
+body.index-page .hero-img {
+    width: 100vw; /* Make it full width of the viewport */
+    max-width: 100%; /* Prevent overflow issues */
+    display: block;
+}
+
+/* Apply only to index.html */
+body.index-page .hero-section {
+    position: relative;
+    width: 100vw;
+    height: 80vh; /* Increased height (doubled approximately) */
+    overflow: hidden; /* Prevents unwanted spacing */
+}
+
+/* Make the hero image cover the increased height */
+body.index-page .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section */
+    display: block;
+}
+
+/* Ensure the "Previous Seasons" section overlaps on scroll */
+body.index-page .previous-seasons {
+    position: relative;
+    margin-top: -100px; /* Moves it up over the hero section */
+    z-index: 10; /* Ensures it overlays the hero section */
+    background: rgba(245, 247, 250, 0.98); /* Adds a slight transparency effect */
+    border-radius: 10px;
+    padding: 40px 20px;
+}
+
+/* Reduce space around "OUR PAST SEASONS" */
+.previous-seasons {
+    position: relative;
+    margin-top: -80px; /* Moves it up slightly over hero section */
+    padding: 20px 10px; /* Reduce overall padding */
+    background: rgba(255, 255, 255, 0.98); /* Ensure visibility */
+    border-radius: 10px;
+}
+
+/* Adjust heading spacing */
+.section-heading {
+    font-size: 2rem; /* Keep text size large */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0; /* Remove extra space around it */
+    padding-top: 10px; /* Slight top padding */
+    padding-bottom: 5px; /* Reduce bottom padding */
+}
+
+/* Apply the navbar background color to .previous-seasons */
+body.index-page .previous-seasons {
+    position: relative;
+    margin-top: -80px; /* Moves it up slightly over the hero section */
+    padding: 40px 20px; /* Adjust padding for a clean look */
+    background: #1a0033; /* Same dark purple as the navbar */
+    border-radius: 10px;
+    color: white; /* Ensure text remains readable */
+}
+
+/* Adjust "OUR PAST SEASONS" heading to contrast */
+body.index-page .previous-seasons .section-heading {
+    color: white; /* Make sure it stands out */
+}
+
+/* Ensure season cards remain visible */
+body.index-page .season-card {
+    background: white; /* Keep contrast so cards stand out */
+    border-radius: 10px;
+    padding: 10px;
+}
+/* Apply navbar background color to .previous-seasons */
+body.index-page .previous-seasons {
+    position: relative;
+    margin-top: -80px; /* Moves it up slightly over hero section */
+    padding: 40px 20px;
+    background: #1a0033; /* Same dark purple as navbar */
+    border: 5px solid #FFD700; /* Yellow border */
+    border-radius: 10px;
+    color: white; /* Ensure text remains readable */
+}
+
+/* Adjust "OUR PAST SEASONS" heading for visibility */
+body.index-page .previous-seasons .section-heading {
+    color: white;
+}
+
+
+/* Instead of this */
+.container {
+    width: 1200px; /* ❌ Bad: Fixed width */
+}
+
+/* Use this */
+.container {
+    width: 90%; /* ✅ Good: Scales on mobile */
+    max-width: 1200px;
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+body {
+    font-size: 1rem; /* Use `rem` instead of `px` */
+}
+button {
+    padding: 10px 20px; /* Larger touch area */
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items on small screens */
+    }
+}
+/* Styles for tablets */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+}
+
+/* Styles for mobile phones */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .nav-links {
+        display: none; /* Hide navbar links on small screens */
+    }
+}
+
+/* ✅ Background Pastel Gradient */
+.matches-container {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to bottom, #e0f7fa, #c5e1a5);
+}
+
+/* ✅ Team Section */
+.team-wrapper {
+    margin-bottom: 50px;
+}
+
+/* ✅ Animated Title for Phantoms & Shadow Phantoms */
+.team-title {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 15px 30px;
+    border-radius: 12px;
+    display: inline-block;
+    text-transform: uppercase;
+    background: white;
+    color: #0c5460;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    letter-spacing: 2px;
+    position: relative;
+    animation: fade-glow 1.5s infinite alternate ease-in-out;
+}
+
+/* 🎭 **Title Glow Animation** */
+@keyframes fade-glow {
+    0% { text-shadow: 0 0 10px #00acc1; }
+    100% { text-shadow: 0 0 20px #00796b; }
+}
+
+/* ✅ Table Container */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✅ Match Table Styling */
+.match-table {
+    width: 85%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fade-in-up 1s ease-out forwards;
+}
+
+/* ✅ Table Header - Smooth Blue-Green Pastel */
+.match-table thead {
+    background: linear-gradient(to right, #80deea, #a5d6a7);
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* ✅ Table Rows - Alternating Blue & Mint */
+.match-table tbody tr:nth-child(odd) { background: #b2ebf2; } /* Soft Blue */
+.match-table tbody tr:nth-child(even) { background: #dcedc8; } /* Light Mint */
+
+/* ✅ Table Borders */
+.match-table th, .match-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ✅ Interactive Hover Effect */
+.match-table tbody tr:hover {
+    background: #aed581; /* Soft Green */
+    transition: 0.3s ease-in-out;
+}
+
+/* ✅ Updated Link Colors - No More Default Blue */
+.match-table a {
+    color: #00796b;  /* Deep Teal */
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.match-table a:hover {
+    text-decoration: underline;
+    color: #004d40;  /* Dark Teal */
+}
+
+/* 🎭 **Smooth Fade-In Animation for Tables** */
+@keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ✅ Phantoms & Shadow Phantoms with Multi-Color Pastel Gradient */
+.team-title {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 15px 30px;
+    border-radius: 12px;
+    display: inline-block;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #42a5f5, #66bb6a, #ffcc80); /* Sky Blue → Green → Light Orange */
+    color: white; /* Make text white for better contrast */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* 🌟 Players Page - Background & Styling */
+.team-container {
+    background-color: #e8f5e9; /* Soft Pastel Green */
+    padding: 40px 20px;
+    border-radius: 12px;
+}
+
+/* 🎯 Team Heading Adjustments */
+.team-heading {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    color: #2e7d32; /* Deep Green */
+    margin: 10px 0 20px 0; /* Reduced top & bottom space */
+}
+
+/* 🏆 Team Member Styling */
+.team-member {
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 768px) {
+    .team-heading {
+        font-size: 24px;
+    }
+}
+
+
+/* 🌟 Gallery Layout */
+.gallery-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3f8ff; /* Light pastel blue */
+}
+
+.gallery-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1565c0; /* Deep Blue */
+    margin-bottom: 20px;
+}
+
+/* 🖼️ Image Grid */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* 📷 Image Block - Increased Size */
+.gallery-item {
+    width: 22%; /* 10% larger */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* 🔍 Enlarged Image */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.lightbox img {
+    width: 50%; /* Enlarged by 50% */
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hide Lightbox */
+.hidden {
+    display: none;
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 45%;
+    }
+
+    .lightbox img {
+        width: 80%;
+    }
+}
+
+/* 🌟 Gallery Layout */
+.gallery-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3f8ff; /* Light pastel blue */
+}
+
+.gallery-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1565c0; /* Deep Blue */
+    margin-bottom: 20px;
+}
+
+/* 🖼️ Image Grid */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* 📷 Image Block - Increased Size by 20% */
+.gallery-item {
+    width: 28%; /* Increased from 22% to 28% */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* 🔍 Enlarged Image */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.lightbox img {
+    width: 60%; /* Enlarged by 50% */
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hide Lightbox */
+.hidden {
+    display: none;
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 50%; /* Adjusted for smaller screens */
+    }
+
+    .lightbox img {
+        width: 85%;
+    }
+}
+
+/* 🌟 About Page Layout */
+.about-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* 📌 Left Side (Main Content) */
+.about-content {
+    flex: 1.2;
+    background: #fff9f1;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* 🎖 Right Side (Core Values) */
+.values-section {
+    flex: 0.8;
+    background: #edf6ff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* 🏅 Core Value Cards */
+.values-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 1024px) {
+    .about-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content,
+    .values-section {
+        width: 100%;
+    }
+}
+
+/* 🌟 Core Values Section */
+.values-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* ✅ Centers the entire block */
+    text-align: center;
+}
+
+/* 🏆 Core Value Cards */
+.values-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* ✅ Centers each card inside the section */
+    gap: 20px;
+    width: 100%;  /* Ensures full width inside the container */
+}
+
+/* 🎖 Individual Value Cards */
+.value-card {
+    width: 80%; /* ✅ Adjust size for perfect alignment */
+    max-width: 400px; /* ✅ Prevents being too wide on large screens */
+    padding: 20px;
+    text-align: center;
+}
+
+/* 🎯 Season Card Styling */
+.index-page .season-card {
+    position: relative;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.index-page .season-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* ✨ Overlay Effect on Hover */
+.index-page .season-card .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    transition: opacity 0.3s;
+}
+
+.index-page .season-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🌟 Ensure Hero Image is Fixed in the Background */
+.index-page .index-hero-section {
+    position: fixed; /* Keeps the hero image static */
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Moves it behind all content */
+}
+
+/* 🎞️ Full-Screen Hero Image */
+.index-page .index-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🚀 Move Content Over the Hero Section */
+.index-page .previous-seasons {
+    position: relative;
+    z-index: 2; /* Ensures it scrolls over */
+    background: rgba(255, 255, 255, 0.9); /* Light transparent overlay */
+    padding: 50px 0;
+    margin-top: 100vh; /* Starts after full-screen hero */
+}
+
+/* 🎯 Ensure Smooth Scrolling Effect */
+html, body {
+    scroll-behavior: smooth;
+}
+
+
+/* Season container with dynamic grid */
+.season-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted for responsiveness */
+    gap: 20px; /* Space between blocks */
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Ensuring each block scales properly */
+.season-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1; /* Maintains square shape */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff; /* Prevents transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image should fully cover the block */
+.season-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures full coverage */
+    display: block;
+}
+
+/* Overlay styling for text */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* 🔹 Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .season-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller blocks for mobile */
+        gap: 15px; /* Slightly smaller gaps */
+    }
+
+    .overlay {
+        font-size: 1em; /* Smaller text for smaller screens */
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .season-container {
+        grid-template-columns: 1fr; /* Single-column layout for very small screens */
+    }
+}
+
+/* Team container spacing */
+.team-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Space between rows */
+.row {
+    gap: 20px;
+}
+
+/* Team member card styling */
+.team-member {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.team-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .team-container {
+        padding: 20px;
+    }
+
+    .team-member {
+        padding: 10px;
+    }
+
+    .row {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-sm-6 {
+        width: 80%; /* Adjust for single column view */
+    }
+}
+
+/* 🟢 Make the container take the full screen width */
+.matches-container {
+    width: 100vw;  /* Use full viewport width */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* 🟢 Ensure both table headers are aligned */
+.team-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px; /* Space between tables */
+}
+
+/* 🟢 Full-width section for tables */
+.table-container {
+    width: 100%;
+    padding: 0 20px; /* Add slight padding for better spacing */
+    overflow-x: auto;
+    margin-bottom: 50px; /* Space between tables */
+}
+
+/* 🟢 Full-width table */
+.match-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures columns have fixed widths */
+    font-size: 14px; /* Optimized font size */
+}
+
+/* 🟢 Adjust column widths for full usage */
+.match-table th,
+.match-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* 🔹 Optimized column distribution */
+.match-table th:nth-child(1),
+.match-table td:nth-child(1) {
+    width: 35%; /* League Name */
+}
+
+.match-table th:nth-child(2),
+.match-table td:nth-child(2) {
+    width: 10%; /* Year */
+}
+
+.match-table th:nth-child(3),
+.match-table td:nth-child(3) {
+    width: 20%; /* Schedule */
+}
+
+.match-table th:nth-child(4),
+.match-table td:nth-child(4) {
+    width: 17.5%; /* Batsmen Stats */
+}
+
+.match-table th:nth-child(5),
+.match-table td:nth-child(5) {
+    width: 17.5%; /* Bowler Stats */
+}
+
+/* 🟢 Style the table headers */
+.match-table thead th {
+    background: #0073e6;
+    color: white;
+    font-weight: bold;
+}
+
+/* 🟢 Alternating row colors for better readability */
+.match-table tbody tr:nth-child(odd) {
+    background-color: #e0f7fa;
+}
+
+.match-table tbody tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+/* 🔹 Mobile Optimizations */
+@media (max-width: 1024px) {
+    .matches-container {
+        width: 100vw;
+    }
+
+    .match-table {
+        font-size: 13px;
+    }
+
+    .match-table th,
+    .match-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .match-table {
+        font-size: 12px;
+    }
+
+    .match-table th,
+    .match-table td {
+        padding: 6px;
+    }
+
+    .table-container {
+        overflow-x: auto; /* Make tables scroll on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .match-table {
+        font-size: 11px;
+    }
+
+    .table-container {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+

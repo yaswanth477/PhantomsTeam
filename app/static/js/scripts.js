@@ -39,3 +39,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const galleryImages = document.querySelectorAll(".gallery-item img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    // Click to enlarge image
+    galleryImages.forEach(img => {
+        img.addEventListener("click", (event) => {
+            event.stopPropagation(); // Prevent closing on image click
+            lightboxImg.src = img.src;
+            lightbox.classList.remove("hidden");
+        });
+    });
+
+    // Click anywhere outside to close
+    function closeLightbox(event) {
+        if (event.target !== lightboxImg) {
+            lightbox.classList.add("hidden");
+        }
+    }
+
+    lightbox.addEventListener("click", closeLightbox);
+});
